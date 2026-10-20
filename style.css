@@ -1,0 +1,57 @@
+:root {
+  color: #243047;
+  background: #f5f7ff;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; min-width: 320px; }
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: radial-gradient(circle at top left, #d9e8ff, transparent 45%), #f5f7ff;
+}
+
+.card {
+  width: min(100%, 680px);
+  padding: clamp(32px, 8vw, 72px);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e2e8ff;
+  border-radius: 28px;
+  box-shadow: 0 24px 70px rgba(65, 80, 140, 0.16);
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  color: #4053bb;
+  background: #edf0ff;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+h1 { margin: 22px 0 14px; font-size: clamp(2.3rem, 7vw, 4.5rem); line-height: 1.05; letter-spacing: -0.04em; }
+.lead { max-width: 490px; margin: 0 auto 30px; color: #62708d; font-size: 1.12rem; line-height: 1.65; }
+
+button {
+  border: 0;
+  border-radius: 14px;
+  padding: 14px 22px;
+  color: white;
+  background: #5368d8;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+button:hover { background: #4053bb; transform: translateY(-2px); }
+button:focus-visible { outline: 4px solid #c7d0ff; outline-offset: 3px; }
+.message { min-height: 1.5em; margin: 18px 0 0; color: #4053bb; font-weight: 700; }
