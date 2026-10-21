@@ -14,7 +14,7 @@
   $$('.filter').forEach((filter) => filter.addEventListener('click', () => { $$('.filter').forEach((item) => item.classList.remove('active')); filter.classList.add('active'); const value = filter.dataset.filter; $$('.project-card').forEach((card) => card.classList.toggle('is-hidden', value !== 'all' && !card.dataset.kind.includes(value))); }));
   const modal = $('#project-modal');
   const modalTitle = $('#modal-title'); let modalTrigger = null;
-  $$('.project-open').forEach((button) => button.addEventListener('click', () => { const project = button.closest('.project-card').dataset.project; modalTitle.textContent = project; modalTrigger = button; modal.classList.add('open'); document.body.style.overflow='hidden'; $('.modal-close')?.focus(); modal.setAttribute('aria-hidden', 'false'); track('project_open', { project }); }));
+  $$('.project-open').forEach((button) => button.addEventListener('click', () => { const project = button.closest('.project-card').dataset.project; button.setAttribute('aria-label', `Рассчитать проект ${project}`); modalTitle.textContent = project; modalTrigger = button; modal.classList.add('open'); document.body.style.overflow='hidden'; $('.modal-close')?.focus(); modal.setAttribute('aria-hidden', 'false'); track('project_open', { project }); }));
   const closeModal = () => { modal.classList.remove('open'); modal.setAttribute('aria-hidden', 'true'); document.body.style.overflow=''; modalTrigger?.focus(); }; $('.modal-to-quiz')?.addEventListener('click', closeModal);
   $('.modal-close')?.addEventListener('click', closeModal);
   modal?.addEventListener('click', (event) => { if (event.target === modal) closeModal(); });
