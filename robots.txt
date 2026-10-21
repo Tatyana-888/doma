@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /privacy.html
+
+Sitemap: https://tatyana-888.github.io/doma/sitemap.xml
